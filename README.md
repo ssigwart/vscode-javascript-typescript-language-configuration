@@ -1,4 +1,4 @@
-# JavaScript/Typescript Language configuration
+# JavaScript/Typescript Language Configuration
 
 This reverts the automatic single line indentation introduced in https://github.com/microsoft/vscode/pull/209038 and similar PRs.
 
