@@ -1,0 +1,81 @@
+{
+	"name": "javascript-typescript-language-configuration",
+	"displayName": "javascript-typescript-language-configuration",
+	"description": "Language configuration for JS/TS.",
+	"version": "1.0.0",
+	"engines": {
+		"vscode": "^1.89.0"
+	},
+	"publisher": "ssigwart",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ssigwart/vscode-javascript-typescript-language-configuration"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"activationEvents": [],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"languages": [
+			{
+				"id": "javascript",
+				"aliases": [
+					"JavaScript",
+					"javascript",
+					"js"
+				],
+				"extensions": [
+					".js",
+					".es6",
+					".mjs",
+					".cjs",
+					".pac"
+				],
+				"filenames": [
+					"jakefile"
+				],
+				"firstLine": "^#!.*\\bnode",
+				"mimetypes": [
+					"text/javascript"
+				],
+				"configuration": "./javascript-language-configuration.json"
+			},
+			{
+        "id": "typescript",
+        "aliases": [
+          "TypeScript",
+          "ts",
+          "typescript"
+        ],
+        "extensions": [
+          ".ts",
+          ".cts",
+          ".mts"
+        ],
+        "configuration": "./typescript-language-configuration.json"
+      }
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run package",
+		"compile": "webpack",
+		"watch": "webpack --watch",
+		"package": "webpack --mode production --devtool hidden-source-map",
+		"lint": "eslint src --ext ts"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.89.0",
+		"@types/mocha": "^10.0.6",
+		"@types/node": "18.x",
+		"@typescript-eslint/eslint-plugin": "^6.19.1",
+		"@typescript-eslint/parser": "^6.19.1",
+		"eslint": "^8.56.0",
+		"typescript": "^5.3.3",
+		"ts-loader": "^9.5.1",
+		"webpack": "^5.90.0",
+		"webpack-cli": "^5.1.4",
+		"@vscode/test-cli": "^0.0.4",
+		"@vscode/test-electron": "^2.3.9"
+	}
+}
